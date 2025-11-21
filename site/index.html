@@ -2,7 +2,7 @@
 {% block title %}Home{% endblock %}
 {% block extra_headers %}
     <link rel="stylesheet"
-          href="{{ url_for('static', filename='assets/styles/home.css') }}" />
+          href="/assets/styles/home.css" />
 {% endblock %}
 {% block content %}
     <div class="pageblock" id="balls">
@@ -16,7 +16,7 @@
         <div class="bcbg-in bg-white center">
             <h1>Welkom!</h1>
             <p>
-                Deze website is mijn digitale CKV-dossier voor het schooljaar 2024-2025.
+                Deze website is mijn digitale CKV-dossier voor de schooljaren 2024-2025 en 2025-2026.
                 <br />
                 Hieronder vindt u een kort overzicht van de inhoud van elke pagina.
                 <br />
@@ -32,10 +32,10 @@
                 <span class="lop-item-title">Blok 1</span>
                 <span class="lop-item-under1">Beeldend</span>
                 <span class="lop-item-under2">Het onzichtbare zichtbaar maken</span>
-                <a href="{{ url_for("period_1") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/blok-1" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="lop-item-right artwork-basic">
-                <img src="/static/images/common/kryptos.jpg"
+                <img src="/images/common/kryptos.jpg"
                      alt="Kryptos (1990) - Jim Sanborn" />
                 <span class="lop-item-img-under1 artbasic-artwork">Kryptos (1990)</span>
                 <span class="lop-item-img-under2 artbasic-artist">Jim Sanborn</span>
@@ -46,10 +46,10 @@
                 <span class="lop-item-title">Blok 2</span>
                 <span class="lop-item-under1">Film</span>
                 <span class="lop-item-under2">Speciale effecten</span>
-                <a href="{{ url_for("period_2") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/blok-2" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="lop-item-right artwork-basic">
-                <img src="/static/images/common/interstellar.png"
+                <img src="/images/common/interstellar.png"
                      alt="Interstellar (2014) - O.a. Christopher Nolan" />
                 <span class="lop-item-img-under1 artbasic-artwork">Interstellar (2014)</span>
                 <span class="lop-item-img-under2 artbasic-artist">O.a. Christopher Nolan</span>
@@ -60,10 +60,10 @@
                 <span class="lop-item-title">Blok 3</span>
                 <span class="lop-item-under1">Film</span>
                 <span class="lop-item-under2">Jouw interpretatie</span>
-                <a href="{{ url_for("period_3") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/blok-3" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="lop-item-right artwork-basic">
-                <img src="/static/images/common/no_other_land1.jpg"
+                <img src="/images/common/no_other_land1.jpg"
                      alt="No Other Land (2024) - O.a. Basel Adra" />
                 <span class="lop-item-img-under1 artbasic-artwork">No Other Land (2024)</span>
                 <span class="lop-item-img-under2 artbasic-artist">O.a. Basel Adra</span>
@@ -74,10 +74,10 @@
                 <span class="lop-item-title">Blok 4</span>
                 <span class="lop-item-under1">Dans</span>
                 <span class="lop-item-under2">Vechtkunst</span>
-                <a href="{{ url_for("period_4") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/blok-4" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="lop-item-right artwork-basic">
-                <img src="/static/images/common/sutra1.jpg"
+                <img src="/images/common/sutra1.jpg"
                      alt="Sutra (2008) - O.a. Sidi Larbi Cherkaoui" />
                 <span class="lop-item-img-under1 artbasic-artwork">Sutra (2008)</span>
                 <span class="lop-item-img-under2 artbasic-artist">O.a. Sidi Larbi Cherkaoui</span>
@@ -87,10 +87,10 @@
             <div class="lop-item-left">
                 <span class="lop-item-title">Introductielessen</span>
                 <span class="lop-item-under2">Liefde</span>
-                <a href="{{ url_for("intro") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/introductielessen" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="lop-item-right artwork-basic">
-                <img src="/static/images/intro/the_lovers_ii.jpg"
+                <img src="/images/intro/the_lovers_ii.jpg"
                      alt="The Lovers II (1928) - René Magritte" />
                 <span class="lop-item-img-under1 artbasic-artwork">The Lovers II (1928)</span>
                 <span class="lop-item-img-under2 artbasic-artist">René Magritte</span>
@@ -99,13 +99,13 @@
         <div class="lop-item">
             <div class="lop-item-left">
                 <span class="lop-item-title">Over mij</span>
-                <a href="{{ url_for("about_me") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/over-mij" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
         <div class="lop-item">
             <div class="lop-item-left">
                 <span class="lop-item-title">Eigen initiatieven</span>
-                <a href="{{ url_for("own_initiatives") }}" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/eigen-initiatieven" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>

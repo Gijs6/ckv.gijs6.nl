@@ -1,0 +1,15 @@
+[site]
+url = "https://ckv.gijs6.nl"
+title = "CKV - Gijs ten Berg"
+description = "CKV-dossier voor de schooljaren 2024-2025 en 2025-2026"
+base_path = ""
+
+[directories]
+site = "site"
+build = "build"
+build_dev = "build-dev"
+templates = "templates"
+
+[features]
+sitemap = true
+feeds = false

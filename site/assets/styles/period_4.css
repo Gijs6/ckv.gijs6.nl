@@ -1,0 +1,12 @@
+.bg-page {
+    background-image: url("/images/period_4/sutra2.jpg");
+}
+
+.pagetitle-big,
+.geninfo-imgcredits {
+    color: var(--white);
+}
+
+.general-information {
+    background-image: url("/images/period_4/4.jpg");
+}

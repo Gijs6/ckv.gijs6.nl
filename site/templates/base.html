@@ -6,11 +6,8 @@
         <title>
             {% block title %}{% endblock %}
         - CKV - Gijs ten Berg</title>
-        <link rel="stylesheet"
-              href="{{ url_for('static', filename='assets/styles/base.css') }}" />
-        <link rel="icon"
-              type="image/x-icon"
-              href="{{ url_for('static', filename='assets/icons/favicon.ico') }}" />
+        <link rel="stylesheet" href="/assets/styles/base.css" />
+        <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
         <script src="https://kit.fontawesome.com/4a94c21782.js"
                 crossorigin="anonymous"></script>
         {% block extra_headers %}{% endblock %}
@@ -18,20 +15,20 @@
     <body>
         <header>
             <nav>
-                {% macro menu_item(endpoint, icon, label) %}
-                    <a class="menu-item{% if request.endpoint == endpoint %} menu-item-active{% endif %}"
-                       href="{{ url_for(endpoint) }}">
+                {% macro menu_item(page, icon, label, url) %}
+                    <a class="menu-item{% if active_page == page %} menu-item-active{% endif %}"
+                       href="{{ url }}">
                         <i class="fa-solid fa-{{ icon }}"></i> <span class="menu-item-title">{{ label }}</span>
                     </a>
                 {% endmacro %}
-                {{ menu_item('home', 'house', 'Home') }}
-                {{ menu_item('about_me', 'user', 'Over mij') }}
-                {{ menu_item('intro', 'person-chalkboard', 'Introductielessen') }}
-                {{ menu_item('own_initiatives', 'building-columns', 'Eigen initiatieven') }}
-                {{ menu_item('period_1', '1', 'Blok 1') }}
-                {{ menu_item('period_2', '2', 'Blok 2') }}
-                {{ menu_item('period_3', '3', 'Blok 3') }}
-                {{ menu_item('period_4', '4', 'Blok 4') }}
+                {{ menu_item('home', 'house', 'Home', '/') }}
+                {{ menu_item('over-mij', 'user', 'Over mij', '/over-mij') }}
+                {{ menu_item('introductielessen', 'person-chalkboard', 'Introductielessen', '/introductielessen') }}
+                {{ menu_item('eigen-initiatieven', 'building-columns', 'Eigen initiatieven', '/eigen-initiatieven') }}
+                {{ menu_item('blok-1', '1', 'Blok 1', '/blok-1') }}
+                {{ menu_item('blok-2', '2', 'Blok 2', '/blok-2') }}
+                {{ menu_item('blok-3', '3', 'Blok 3', '/blok-3') }}
+                {{ menu_item('blok-4', '4', 'Blok 4', '/blok-4') }}
             </nav>
             <div>
                 <h1>Gijs ten Berg</h1>
@@ -53,7 +50,7 @@
                         Inhoud en code vallen onder het <strong>publieke domein</strong>
                     </p>
                     <p>
-                        Gemaakt met <a href="https://github.com/pallets/flask" target="_blank">Flask</a> en <a href="https://github.com/pallets/jinja" target="_blank">Jinja</a>, gehost op <a href="https://eu.pythonanywhere.com/" target="_blank">PythonAnywhere</a>
+                        Gemaakt met <a href="https://github.com/pallets/jinja" target="_blank">Jinja</a>, gehost met <a href="https://github.com/dupunkto/lift" target="_blank">lift</a>
                     </p>
                     <p>
                         <a href="https://github.com/Gijs6/CKVsite" target="_blank">Broncode op GitHub</a>

@@ -1,17 +1,43 @@
 #!/bin/bash
 
 serve() {
-  .venv/bin/python app.py
+  .venv/bin/stapler serve
+}
+
+build() {
+  .venv/bin/stapler build
+
+  # Process CSS and format HTML
+  find build/assets -name '*.css' -exec sh -c 'lightningcss --browserslist --bundle --minify "$1" -o "$1" 2>/dev/null || true' _ {} \; 2>/dev/null
+  prettier --write --ignore-path /dev/null "build/**/*.{css,js,html}"
 }
 
 deploy() {
-  lift deploy
+  build
+  lift deploy && echo "Deployed successfully to https://$(yq .name Liftfile)"
+}
+
+publish() {
+  if ! git diff-index --quiet HEAD --; then
+    git stash push -m "bake-publish"
+    STASHED=1
+  else
+    STASHED=0
+  fi
+
+  format || true
+  git commit -a -m "Format repo" || true
+
+  if [ "$STASHED" -eq 1 ]; then
+    git stash pop
+  fi
+
+  git push & deploy & wait
 }
 
 format() {
   ruff format .
-  prettier --write "**/*.{css,js}"
-  prettier --write "**/*.json"
+  prettier --write "**/*.{css,js,json,xml}"
   djlint . --reformat
   markdownlint --fix "**/*.md" || true
 }

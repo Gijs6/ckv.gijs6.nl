@@ -1,9 +1,10 @@
-__pycache__
 .venv
 
 *.mp3
 *.mp4
 *.webm
 
-docs
-
+# Build directories
+build/
+build-dev/
+build-backup/
