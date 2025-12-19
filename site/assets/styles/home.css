@@ -1,35 +1,41 @@
-#balls {
+.hero-section {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 75vh !important;
+
+    .hero-content {
+        text-align: center;
+        z-index: 10;
+        position: relative;
+
+        h1 {
+            font-size: 6em;
+            margin: 0;
+
+            @media (max-width: 1000px) {
+                font-size: 5em;
+            }
+        }
+
+        p {
+            font-size: 3em;
+            margin: 0;
+        }
+    }
+
+    .hero-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
 }
 
-#namebox {
-    text-align: center;
-}
-
-#namebox h1 {
-    z-index: 10;
-    position: relative;
-    font-size: 6em;
-}
-
-#namebox h2 {
-    font-size: 3em;
-}
-
-#balls-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-}
-
-#list-of-pages {
+.pages-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -37,89 +43,94 @@
     justify-content: flex-start;
     gap: 20px;
     padding: 20px;
-}
 
-.lop-item {
-    background: var(--blue);
-    padding: 15px;
-    color: var(--white);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    flex-grow: 1;
-    border-radius: 30px;
-    width: min-content;
-    min-width: min(100%, 500px);
-    transition: transform 300ms ease-in-out;
-}
+    .page-card {
+        background: var(--blue);
+        padding: 15px;
+        color: var(--white);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-grow: 1;
+        border-radius: 30px;
+        width: min-content;
+        min-width: min(100%, 500px);
+        transition: transform 300ms ease-in-out;
 
-.lop-item:hover {
-    transform: scale(1.025);
-}
+        @media (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
 
-.lop-item-left {
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
-    align-items: center;
-    flex-grow: 1;
-    text-align: center;
-    min-width: min-content;
-}
+        &:hover {
+            transform: scale(1.025);
+        }
 
-.lop-item-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    font-size: 0.8em;
-}
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+            align-items: center;
+            flex-grow: 1;
+            text-align: center;
+            min-width: min-content;
 
-.lop-item-title {
-    font-size: 1.75em;
-    font-weight: 700;
-}
+            h3.card-title {
+                font-size: 1.75em;
+                font-weight: 700;
+                margin: 0;
+            }
 
-.lop-item-under1 {
-    font-size: 1.35em;
-    font-weight: 500;
-}
+            p.card-subtitle {
+                font-size: 1.35em;
+                font-weight: 500;
+                margin: 0.25em 0;
+            }
 
-.lop-item-under2 {
-    font-size: 1.1em;
-    font-weight: 300;
-}
+            p.card-description {
+                font-size: 1.1em;
+                font-weight: 300;
+                margin: 0.5em 0;
+            }
 
-.lop-item .button {
-    margin-top: 20px;
-    font-size: 1.15em;
-    color: var(--black);
-}
+            .button {
+                margin-top: 20px;
+                font-size: 1.15em;
+                color: var(--black);
+            }
+        }
 
-.lop-item-img-under1 {
-    font-size: 1.1em;
-    font-weight: 500;
-}
+        figure.card-artwork {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            font-size: 0.8em;
 
-.lop-item-img-under2 {
-    font-weight: 800;
-}
+            img {
+                width: max(100%, 150px);
+                height: 150px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
 
-.lop-item-right img {
-    width: max(100%, 150px);
-    height: 150px;
-    object-fit: cover;
-    border-radius: 20px;
-}
+            figcaption {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-top: 0.5em;
 
-@media (max-width: 1000px) {
-    .lop-item {
-        flex-wrap: wrap;
-    }
+                .artwork-title {
+                    font-size: 1.1em;
+                    font-weight: 500;
+                }
 
-    #namebox h1 {
-        font-size: 5em;
+                .artwork-artist {
+                    font-weight: 800;
+                }
+            }
+        }
     }
 }

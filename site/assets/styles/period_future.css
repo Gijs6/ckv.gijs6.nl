@@ -4,28 +4,28 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-}
 
-.futureperiodperiod {
-    font-size: 6em;
-}
+    .futureperiod-label {
+        font-size: 6em;
+    }
 
-.futureperiodnumsdiv span {
-    transition: all 250ms ease;
-    opacity: 0;
-}
+    .futureperiod-numbers {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 2px;
 
-.futureperiodtext {
-    font-size: 1.5em;
-}
+        span {
+            transition: all 250ms ease;
+            opacity: 0;
+        }
+    }
 
-.futureperiodnumsdiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 2px;
+    .futureperiod-text {
+        font-size: 1.5em;
+    }
 }
 
 .number-12 {
@@ -33,6 +33,10 @@
     font-weight: 100;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 1200ms;
+
+    &:hover {
+        font-size: 0.6em;
+    }
 }
 
 .number-11 {
@@ -40,6 +44,10 @@
     font-weight: 100;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 1100ms;
+
+    &:hover {
+        font-size: 0.8em;
+    }
 }
 
 .number-10 {
@@ -47,6 +55,10 @@
     font-weight: 100;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 1000ms;
+
+    &:hover {
+        font-size: 1.1em;
+    }
 }
 
 .number-9 {
@@ -54,12 +66,21 @@
     font-weight: 100;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 900ms;
+
+    &:hover {
+        font-size: 1.4em;
+    }
 }
+
 .number-8 {
     font-size: 1.4em;
     font-weight: 100;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 800ms;
+
+    &:hover {
+        font-size: 1.9em;
+    }
 }
 
 .number-7 {
@@ -67,6 +88,10 @@
     font-weight: 200;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 700ms;
+
+    &:hover {
+        font-size: 2.5em;
+    }
 }
 
 .number-6 {
@@ -74,6 +99,10 @@
     font-weight: 300;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 600ms;
+
+    &:hover {
+        font-size: 3.3em;
+    }
 }
 
 .number-5 {
@@ -81,6 +110,10 @@
     font-weight: 400;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 500ms;
+
+    &:hover {
+        font-size: 4.4em;
+    }
 }
 
 .number-4 {
@@ -88,6 +121,10 @@
     font-weight: 500;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 400ms;
+
+    &:hover {
+        font-size: 5.9em;
+    }
 }
 
 .number-3 {
@@ -95,6 +132,10 @@
     font-weight: 600;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 300ms;
+
+    &:hover {
+        font-size: 7.9em;
+    }
 }
 
 .number-2 {
@@ -102,6 +143,10 @@
     font-weight: 700;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 200ms;
+
+    &:hover {
+        font-size: 10.5em;
+    }
 }
 
 .number-1 {
@@ -109,62 +154,18 @@
     font-weight: 800;
     animation: fadeIn 150ms ease-in-out forwards;
     animation-delay: 100ms;
+
+    &:hover {
+        font-size: 14em;
+    }
 }
 
 .number-0 {
     font-size: 17em;
     font-weight: 900;
     animation: fadeIn 150ms ease-in-out forwards;
-}
 
-.number-12:hover {
-    font-size: 0.6em;
-}
-
-.number-11:hover {
-    font-size: 0.8em;
-}
-
-.number-10:hover {
-    font-size: 1.1em;
-}
-
-.number-9:hover {
-    font-size: 1.4em;
-}
-
-.number-8:hover {
-    font-size: 1.9em;
-}
-
-.number-7:hover {
-    font-size: 2.5em;
-}
-
-.number-6:hover {
-    font-size: 3.3em;
-}
-
-.number-5:hover {
-    font-size: 4.4em;
-}
-
-.number-4:hover {
-    font-size: 5.9em;
-}
-
-.number-3:hover {
-    font-size: 7.9em;
-}
-
-.number-2:hover {
-    font-size: 10.5em;
-}
-
-.number-1:hover {
-    font-size: 14em;
-}
-
-.number-0:hover {
-    font-size: 18.7em;
+    &:hover {
+        font-size: 18.7em;
+    }
 }

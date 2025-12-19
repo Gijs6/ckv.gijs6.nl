@@ -117,7 +117,7 @@ header div h2 {
     font-weight: 500;
 }
 
-#scrollable {
+.scrollable-content {
     margin-left: 75px;
     display: flex;
     flex-direction: column;
@@ -140,15 +140,21 @@ footer {
     align-items: center;
     font-size: 0.8em;
     color: var(--white);
-}
 
-footer a {
-    color: inherit;
-}
+    a {
+        color: inherit;
+    }
 
-#footer-right h2,
-#footer-right h3 {
-    font-size: 1.25em;
+    p {
+        margin: 0.5em 0;
+    }
+
+    .footer-left,
+    .footer-right {
+        p {
+            margin: 0.25em 0;
+        }
+    }
 }
 
 .pagetitle-small {
@@ -158,7 +164,7 @@ footer a {
 }
 
 .pageblock {
-    padding: 50px 175px;
+    padding: 50px 300px;
 }
 
 .pageblock.columns {
@@ -171,11 +177,11 @@ footer a {
 }
 
 .pageblock.columns > *:first-child {
-    padding-left: 175px;
+    padding-left: 300px;
 }
 
 .pageblock.columns > *:last-child {
-    padding-right: 175px;
+    padding-right: 300px;
 }
 
 .columns {
@@ -365,7 +371,7 @@ p.center {
 }
 
 .titleblock.bg-fancy {
-    padding: 175px 10px;
+    padding: 300px 10px;
 }
 
 .titleblock.bg-fancy > h1 > i {
@@ -471,7 +477,7 @@ ol {
 }
 
 .general-information {
-    padding: 175px;
+    padding: 300px;
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
@@ -578,6 +584,28 @@ ol {
     }
 }
 
+@media (max-width: 1400px) {
+    .pageblock {
+        padding: 50px 150px;
+    }
+
+    .pageblock.columns > *:first-child {
+        padding-left: 150px;
+    }
+
+    .pageblock.columns > *:last-child {
+        padding-right: 150px;
+    }
+
+    .general-information {
+        padding: 150px;
+    }
+
+    .titleblock.bg-fancy {
+        padding: 150px 10px;
+    }
+}
+
 @media (max-width: 1000px) {
     * {
         word-break: break-word;
@@ -638,7 +666,7 @@ ol {
         min-width: 100%;
     }
 
-    #scrollable {
+    .scrollable-content {
         margin-left: 0;
         margin-top: 75px;
     }

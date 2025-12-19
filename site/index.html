@@ -1,119 +1,128 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
+
+{% block title -%}
+    Home
+{%- endblock title %}
+
 {% block extra_headers %}
-    <link rel="stylesheet"
-          href="/assets/styles/home.css" />
-{% endblock %}
+    <link rel="stylesheet" href="/assets/styles/home.css">
+{% endblock extra_headers %}
+
 {% block content %}
-    <div class="pageblock" id="balls">
-        <div id="namebox">
+    <section class="pageblock hero-section">
+        <div class="hero-content">
             <h1>Gijs ten Berg</h1>
-            <h2>CKV-website</h2>
+            <p>CKV-website</p>
         </div>
-        <canvas id="balls-canvas"></canvas>
-    </div>
-    <div class="pageblock bcbg-out bg-yellow" id="introduction">
+        <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    </section>
+
+    <section class="pageblock bcbg-out bg-yellow introduction-section">
         <div class="bcbg-in bg-white center">
-            <h1>Welkom!</h1>
+            <h2>Welkom!</h2>
             <p>
                 Deze website is mijn digitale CKV-dossier voor de schooljaren 2024-2025 en 2025-2026.
-                <br />
                 Hieronder vindt u een kort overzicht van de inhoud van elke pagina.
-                <br />
                 U kunt uiteraard ook het menu gebruiken om tussen de pagina's te navigeren.
-                <br />
                 Veel leesplezier!
             </p>
         </div>
-    </div>
-    <div class="pageblock" id="list-of-pages">
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Blok 1</span>
-                <span class="lop-item-under1">Beeldend</span>
-                <span class="lop-item-under2">Het onzichtbare zichtbaar maken</span>
-                <a href="/blok-1" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <section class="pageblock pages-list" aria-label="Overzicht van alle pagina's">
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Blok 1</h3>
+                <p class="card-subtitle">Beeldend</p>
+                <p class="card-description">Het onzichtbare zichtbaar maken</p>
+                <a href="/blok-1" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="lop-item-right artwork-basic">
-                <img src="/images/common/kryptos.jpg"
-                     alt="Kryptos (1990) - Jim Sanborn" />
-                <span class="lop-item-img-under1 artbasic-artwork">Kryptos (1990)</span>
-                <span class="lop-item-img-under2 artbasic-artist">Jim Sanborn</span>
+            <figure class="card-artwork artwork-basic">
+                <img src="/images/common/kryptos.jpg" alt="Kryptos (1990) - Jim Sanborn" loading="lazy">
+                <figcaption>
+                    <span class="artwork-title artbasic-artwork">Kryptos (1990)</span>
+                    <span class="artwork-artist artbasic-artist">Jim Sanborn</span>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Blok 2</h3>
+                <p class="card-subtitle">Film</p>
+                <p class="card-description">Speciale effecten</p>
+                <a href="/blok-2" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Blok 2</span>
-                <span class="lop-item-under1">Film</span>
-                <span class="lop-item-under2">Speciale effecten</span>
-                <a href="/blok-2" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+            <figure class="card-artwork artwork-basic">
+                <img src="/images/common/interstellar.png" alt="Interstellar (2014) - O.a. Christopher Nolan" loading="lazy">
+                <figcaption>
+                    <span class="artwork-title artbasic-artwork">Interstellar (2014)</span>
+                    <span class="artwork-artist artbasic-artist">O.a. Christopher Nolan</span>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Blok 3</h3>
+                <p class="card-subtitle">Film</p>
+                <p class="card-description">Jouw interpretatie</p>
+                <a href="/blok-3" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="lop-item-right artwork-basic">
-                <img src="/images/common/interstellar.png"
-                     alt="Interstellar (2014) - O.a. Christopher Nolan" />
-                <span class="lop-item-img-under1 artbasic-artwork">Interstellar (2014)</span>
-                <span class="lop-item-img-under2 artbasic-artist">O.a. Christopher Nolan</span>
+            <figure class="card-artwork artwork-basic">
+                <img src="/images/common/no_other_land1.jpg" alt="No Other Land (2024) - O.a. Basel Adra" loading="lazy">
+                <figcaption>
+                    <span class="artwork-title artbasic-artwork">No Other Land (2024)</span>
+                    <span class="artwork-artist artbasic-artist">O.a. Basel Adra</span>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Blok 4</h3>
+                <p class="card-subtitle">Dans</p>
+                <p class="card-description">Vechtkunst</p>
+                <a href="/blok-4" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Blok 3</span>
-                <span class="lop-item-under1">Film</span>
-                <span class="lop-item-under2">Jouw interpretatie</span>
-                <a href="/blok-3" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+            <figure class="card-artwork artwork-basic">
+                <img src="/images/common/sutra1.jpg" alt="Sutra (2008) - O.a. Sidi Larbi Cherkaoui" loading="lazy">
+                <figcaption>
+                    <span class="artwork-title artbasic-artwork">Sutra (2008)</span>
+                    <span class="artwork-artist artbasic-artist">O.a. Sidi Larbi Cherkaoui</span>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Introductielessen</h3>
+                <p class="card-description">Liefde</p>
+                <a href="/introductielessen" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="lop-item-right artwork-basic">
-                <img src="/images/common/no_other_land1.jpg"
-                     alt="No Other Land (2024) - O.a. Basel Adra" />
-                <span class="lop-item-img-under1 artbasic-artwork">No Other Land (2024)</span>
-                <span class="lop-item-img-under2 artbasic-artist">O.a. Basel Adra</span>
+            <figure class="card-artwork artwork-basic">
+                <img src="/images/intro/the_lovers_ii.jpg" alt="The Lovers II (1928) - René Magritte" loading="lazy">
+                <figcaption>
+                    <span class="artwork-title artbasic-artwork">The Lovers II (1928)</span>
+                    <span class="artwork-artist artbasic-artist">René Magritte</span>
+                </figcaption>
+            </figure>
+        </article>
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Over mij</h3>
+                <a href="/over-mij" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Blok 4</span>
-                <span class="lop-item-under1">Dans</span>
-                <span class="lop-item-under2">Vechtkunst</span>
-                <a href="/blok-4" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="page-card">
+            <div class="card-content">
+                <h3 class="card-title">Eigen initiatieven</h3>
+                <a href="/eigen-initiatieven" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div class="lop-item-right artwork-basic">
-                <img src="/images/common/sutra1.jpg"
-                     alt="Sutra (2008) - O.a. Sidi Larbi Cherkaoui" />
-                <span class="lop-item-img-under1 artbasic-artwork">Sutra (2008)</span>
-                <span class="lop-item-img-under2 artbasic-artist">O.a. Sidi Larbi Cherkaoui</span>
-            </div>
-        </div>
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Introductielessen</span>
-                <span class="lop-item-under2">Liefde</span>
-                <a href="/introductielessen" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="lop-item-right artwork-basic">
-                <img src="/images/intro/the_lovers_ii.jpg"
-                     alt="The Lovers II (1928) - René Magritte" />
-                <span class="lop-item-img-under1 artbasic-artwork">The Lovers II (1928)</span>
-                <span class="lop-item-img-under2 artbasic-artist">René Magritte</span>
-            </div>
-        </div>
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Over mij</span>
-                <a href="/over-mij" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="lop-item">
-            <div class="lop-item-left">
-                <span class="lop-item-title">Eigen initiatieven</span>
-                <a href="/eigen-initiatieven" class="button bg-white">Naar pagina <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
+        </article>
+    </section>
+
     <script type="module">
         import Spheres2Background from "https://cdn.jsdelivr.net/npm/threejs-components@0.0.8/build/backgrounds/spheres2.cdn.min.js";
 
         try {
-            const bg = Spheres2Background(document.getElementById("balls-canvas"), {
+            const bg = Spheres2Background(document.querySelector(".hero-canvas"), {
                 count: 275,
                 colors: [0xeaf2ef, 0x197bbd, 0x04a777],
                 minSize: 0.7,
@@ -121,9 +130,9 @@
             });
         } catch (error) {
             console.error("Fout bij het laden van de achtergrond:", error);
-            const balls = document.getElementById("balls");
-            balls.style.background = "url('https://picsum.photos/id/347/5000/4000') no-repeat center center fixed";
-            balls.style.backgroundSize = "cover";
+            const heroSection = document.querySelector(".hero-section");
+            heroSection.style.background = "url('https://picsum.photos/id/347/5000/4000') no-repeat center center fixed";
+            heroSection.style.backgroundSize = "cover";
         }
     </script>
-{% endblock %}
+{% endblock content %}

@@ -8,3 +8,12 @@
 build/
 build-dev/
 build-backup/
+
+package.json
+package-lock.json
+
+node_modules
+
+# Temporary files and dumps
+foto-dump/
+*.zip

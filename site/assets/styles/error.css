@@ -23,7 +23,7 @@ body {
     align-items: flex-start;
 }
 
-#txtbox {
+.error-box {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -31,27 +31,37 @@ body {
     background: #0000003d;
     padding: 20px;
     border-radius: 20px;
+
+    .error-number {
+        font-size: 4em;
+        font-weight: 700;
+    }
+
+    .error-info {
+        display: flex;
+        flex-direction: column;
+
+        .error-message-primary {
+            font-size: 2em;
+        }
+
+        .error-message-secondary {
+            font-size: 1.5em;
+        }
+    }
+
+    a {
+        color: inherit;
+        font-size: 2em;
+        transition: 500ms opacity ease;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
 }
 
-#errornum {
-    font-size: 4em;
-    font-weight: 700;
-}
-
-#extra-info {
-    display: flex;
-    flex-direction: column;
-}
-
-#message1 {
-    font-size: 2em;
-}
-
-#message2 {
-    font-size: 1.5em;
-}
-
-#credits {
+.error-credits {
     position: absolute;
     bottom: 5vh;
     right: 5vw;
@@ -61,22 +71,12 @@ body {
     font-size: 1.2em;
     padding: 5vh 0 0 5vw;
     text-align: right;
-}
 
-#artwork {
-    font-weight: 500;
-}
+    .artwork-title {
+        font-weight: 500;
+    }
 
-#artist {
-    font-weight: 800;
-}
-
-#txtbox a {
-    color: inherit;
-    font-size: 2em;
-    transition: 500ms opacity ease;
-}
-
-#txtbox a:hover {
-    opacity: 0.75;
+    .artwork-artist {
+        font-weight: 800;
+    }
 }

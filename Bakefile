@@ -6,10 +6,23 @@ serve() {
 
 build() {
   .venv/bin/stapler build
+  find build -name '*.css' -exec sh -c 'lightningcss --browserslist --bundle --minify "$1" -o "$1"' _ {} \;
+  prettier --write --config .prettierrc --ignore-path /dev/null "build/**/*.{css,js,xml,html}"
+  
+  
+  mkdir -p build/gijstenberg5a2
 
-  # Process CSS and format HTML
-  find build/assets -name '*.css' -exec sh -c 'lightningcss --browserslist --bundle --minify "$1" -o "$1" 2>/dev/null || true' _ {} \; 2>/dev/null
-  prettier --write --ignore-path /dev/null "build/**/*.{css,js,html}"
+  for d in build/*; do
+    name=$(basename "$d")
+
+    case "$name" in
+      assets|images|favicon.ico|gijstenberg5a2)
+        continue
+        ;;
+    esac
+
+    mv "$d" build/gijstenberg5a2/
+  done
 }
 
 deploy() {
