@@ -1,0 +1,13 @@
+@ckv.gijs6.nl host ckv.gijs6.nl
+handle @ckv.gijs6.nl {
+	redir / /gijstenberg5a2 permanent
+
+	@notPrefixed {
+		not path /gijstenberg5a2*
+		not path /assets*
+		not path /images*
+		not path /favicon.ico
+	}
+
+	redir @notPrefixed /gijstenberg5a2{uri} permanent
+}
